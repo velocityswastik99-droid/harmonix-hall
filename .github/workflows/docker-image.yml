@@ -17,6 +17,6 @@ jobs:
     - name: Build the Docker image
       run: docker build -t myimage:latest .
     - name: run the container
-      run: docker run -d -p myimage:8080 .
+      run: docker run -d -p 8080:8080 myimage:latest
     - name: see the container
       run: docker ps 
